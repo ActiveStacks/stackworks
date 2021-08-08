@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ProductController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +27,8 @@ Route::post('/saveproduct', [PagesController::class, 'saveproduct']);
 Route::get('/edit/{id}', [PagesController::class, 'editproduct']);
 Route::post('/update', [PagesController::class, 'updateproduct']);
 Route::get('/delete/{id}',[PagesController::class, 'deleteproduct']);
+
+Route::resource('products', ProductController::class);
+
+
+
